@@ -1,50 +1,22 @@
-import React from 'react';
-import {getCourses} from '../api/courseApi'
+import React, { useState, useEffect } from "react";
+import { getCourses } from "../api/courseApi";
+import CourseList from "./CourseList";
 
-class CoursesPage extends  React.Component{
-    //set state to hold data
-        state={
-            courses:[],
-        }
+function CoursesPage() {
+    const [courses, setCourses] = useState([]);
 
-        //immediately after component mounts
-        componentDidMount() {
-            getCourses().then(courses=>{
-                //set courses state from the courses we have received.
-                this.setState({courses:courses})
-            });
-        }
+    useEffect(() => {
+        getCourses().then(_courses => setCourses(_courses));
+    }, []);
 
-    render(){
-        return (
-            <React.Fragment>
-                <h1>Courses</h1>
-                <table className={"table"}>
-                    <thead>
-                        <tr>
-                            <tr>Title</tr>
-                            <tr>Author Id</tr>
-                            <tr>Category</tr>
-                        </tr>
-                    </thead>
-                     <tbody>
-                     {/*in react we usually use map function to iterate over arrays*/}
-                     { this.state.courses.map( course =>{
-                         return (
-                             <tr key={course.id}>
-                             <td>{course.title}</td>
-                             <td>{course.authorId}</td>
-                             <td>{course.category}</td>
-                             </tr>
-                         );
-                     })}
-                     </tbody>
-                </table>
-            </React.Fragment>
-        );
-    }
-
+    return (
+        <>
+            <h2>Courses</h2>
+            {/*component composition*/}
+            {/*Pass logic to child component usinf props*/}
+            <CourseList courses={courses} />
+        </>
+    );
 }
-
 
 export default CoursesPage;
