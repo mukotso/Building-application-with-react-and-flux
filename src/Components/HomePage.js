@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from "react-router-dom"
 function HomePage(){
     return (
         <div className="container">
@@ -7,7 +7,7 @@ function HomePage(){
         <h1>Pluralsight Course Administration</h1>
         <p>React , flux and react router for intermediate developers</p>
 
-            <a href="/about">About </a>
+            <Link to="about" className="btn btn-sm btn-success">About </Link>
     </div>
         </div>
     );
