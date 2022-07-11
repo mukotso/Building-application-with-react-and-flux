@@ -2,7 +2,7 @@
   "courses": [
     {
       "id": 1,
-      "title": "Securing React Apps with Auth0",
+      "title": "Securing React Apps with Auth",
       "slug": "react-auth0-authentication-security",
       "authorId": 1,
       "category": "JavaScript"
@@ -69,6 +69,46 @@
       "slug": "web-components-shadow-dom",
       "authorId": 1,
       "category": "HTML5"
+    },
+    {
+      "id": 11,
+      "slug": "new-course",
+      "title": "new course",
+      "authorId": 1,
+      "category": "wewe",
+      "createdAt": 1657534329708
+    },
+    {
+      "id": 12,
+      "slug": "bombo",
+      "title": "bombo",
+      "authorId": 1,
+      "category": "lulu",
+      "createdAt": 1657535038054
+    },
+    {
+      "id": 13,
+      "slug": "test",
+      "title": "test",
+      "authorId": 1,
+      "category": "tset",
+      "createdAt": 1657535663819
+    },
+    {
+      "id": 14,
+      "slug": "test",
+      "title": "test",
+      "authorId": 1,
+      "category": "yyuy",
+      "createdAt": 1657535726692
+    },
+    {
+      "id": 15,
+      "slug": "waste",
+      "title": "waste",
+      "authorId": 1,
+      "category": "tyyy",
+      "createdAt": 1657535758905
     }
   ],
   "authors": [
